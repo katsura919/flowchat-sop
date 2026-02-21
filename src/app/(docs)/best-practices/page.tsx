@@ -54,7 +54,7 @@ export default function BestPracticesPage() {
                 key={item.title}
                 className="rounded-lg border p-4 flex gap-4"
               >
-                <div className="mt-0.5 h-2 w-2 rounded-full bg-primary shrink-0 mt-2" />
+                <div className="mt-0.5 h-2 w-2 rounded-full bg-primary shrink-0 " />
                 <div>
                   <p className="text-sm font-semibold text-foreground">
                     {item.title}

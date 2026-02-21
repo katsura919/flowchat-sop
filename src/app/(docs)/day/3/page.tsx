@@ -86,6 +86,113 @@ export default function Day3Page() {
 
       <section className="mt-10 space-y-4">
         <h2 className="text-xl font-semibold tracking-tight">
+          The Ghosting Protocol
+        </h2>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          When a lead stops responding at Stage 08 or 09, do not bombard them or
+          give up immediately. Follow this exact sequence.
+        </p>
+
+        <div className="space-y-3">
+          {[
+            {
+              step: "Step 1",
+              label: "The Value Bump",
+              timing: "After 48 hours of silence",
+              action:
+                "Send a non-salesy resource — a case study, a stat, or a genuinely helpful tip relevant to their situation. No pitch. No ask. Just value.",
+            },
+            {
+              step: "Step 2",
+              label: "The Break-Up Message",
+              timing: "After 7 days of silence",
+              action:
+                "\"Hey [Name], assuming this isn't a priority right now. I'll take you off my follow-up list — but reach out if things change!\"",
+            },
+            {
+              step: "Step 3",
+              label: "Archive",
+              timing: "Immediately after sending Step 2",
+              action:
+                'Move the lead to "Closed / Lost." This keeps the pipeline clean and your focus on active opportunities.',
+            },
+          ].map((s) => (
+            <div
+              key={s.step}
+              className="rounded-lg border bg-card p-4 flex gap-4"
+            >
+              <span className="shrink-0 rounded-md bg-muted px-2 py-0.5 text-xs font-bold text-muted-foreground h-fit">
+                {s.step}
+              </span>
+              <div>
+                <div className="flex items-baseline gap-2 flex-wrap">
+                  <p className="text-sm font-semibold text-foreground">
+                    {s.label}
+                  </p>
+                  <span className="text-xs text-muted-foreground">
+                    {s.timing}
+                  </span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                  {s.action}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10 space-y-4">
+        <h2 className="text-xl font-semibold tracking-tight">
+          The Double-Tap Booking Method
+        </h2>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-1">
+          Sending a booking link alone is not enough. This method reduces
+          no-shows and increases actual calendar confirmations.
+        </p>
+
+        <div className="space-y-3">
+          {[
+            {
+              step: "1",
+              label: "Send the Booking Link",
+              detail: "Share the link with a brief, low-pressure invitation.",
+            },
+            {
+              step: "2",
+              label: "The Grab",
+              detail:
+                "\"I'll drop the link here — but what's your best email? I'll send a calendar invite so we don't waste your time.\" Collect contact details immediately.",
+            },
+            {
+              step: "3",
+              label: "Manual Sync Check",
+              detail:
+                "Check the calendar 2 hours later. If they have not booked, send one gentle reminder — not a sales pitch.",
+            },
+          ].map((s) => (
+            <div
+              key={s.step}
+              className="flex items-start gap-4 rounded-lg border p-3.5"
+            >
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                {s.step}
+              </span>
+              <div>
+                <p className="text-sm font-semibold text-foreground">
+                  {s.label}
+                </p>
+                <p className="text-sm text-muted-foreground mt-0.5 leading-relaxed">
+                  {s.detail}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10 space-y-4">
+        <h2 className="text-xl font-semibold tracking-tight">
           Conversation Standards
         </h2>
 

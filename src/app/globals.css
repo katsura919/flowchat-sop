@@ -5,122 +5,340 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-	--color-sidebar-ring: var(--sidebar-ring);
-	--color-sidebar-border: var(--sidebar-border);
-	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-	--color-sidebar-accent: var(--sidebar-accent);
-	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-	--color-sidebar-primary: var(--sidebar-primary);
-	--color-sidebar-foreground: var(--sidebar-foreground);
-	--color-sidebar: var(--sidebar);
-	--color-chart-5: var(--chart-5);
-	--color-chart-4: var(--chart-4);
-	--color-chart-3: var(--chart-3);
-	--color-chart-2: var(--chart-2);
-	--color-chart-1: var(--chart-1);
-	--color-ring: var(--ring);
-	--color-input: var(--input);
-	--color-border: var(--border);
-	--color-destructive: var(--destructive);
-	--color-accent-foreground: var(--accent-foreground);
-	--color-accent: var(--accent);
-	--color-muted-foreground: var(--muted-foreground);
-	--color-muted: var(--muted);
-	--color-secondary-foreground: var(--secondary-foreground);
-	--color-secondary: var(--secondary);
-	--color-primary-foreground: var(--primary-foreground);
-	--color-primary: var(--primary);
-	--color-popover-foreground: var(--popover-foreground);
-	--color-popover: var(--popover);
-	--color-card-foreground: var(--card-foreground);
-	--color-card: var(--card);
-	--radius-sm: calc(var(--radius) - 4px);
-	--radius-md: calc(var(--radius) - 2px);
-	--radius-lg: var(--radius);
-	--radius-xl: calc(var(--radius) + 4px);
-	--radius-2xl: calc(var(--radius) + 8px);
-	--radius-3xl: calc(var(--radius) + 12px);
-	--radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
 }
 
 :root {
-	--radius: 0.625rem;
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.13 0.028 261.692);
-	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.13 0.028 261.692);
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.13 0.028 261.692);
-	--primary: oklch(0.21 0.034 264.665);
-	--primary-foreground: oklch(0.985 0.002 247.839);
-	--secondary: oklch(0.967 0.003 264.542);
-	--secondary-foreground: oklch(0.21 0.034 264.665);
-	--muted: oklch(0.967 0.003 264.542);
-	--muted-foreground: oklch(0.551 0.027 264.364);
-	--accent: oklch(0.967 0.003 264.542);
-	--accent-foreground: oklch(0.21 0.034 264.665);
-	--destructive: oklch(0.577 0.245 27.325);
-	--border: oklch(0.928 0.006 264.531);
-	--input: oklch(0.928 0.006 264.531);
-	--ring: oklch(0.707 0.022 261.325);
-	--chart-1: oklch(0.646 0.222 41.116);
-	--chart-2: oklch(0.6 0.118 184.704);
-	--chart-3: oklch(0.398 0.07 227.392);
-	--chart-4: oklch(0.828 0.189 84.429);
-	--chart-5: oklch(0.769 0.188 70.08);
-	--sidebar: oklch(0.985 0.002 247.839);
-	--sidebar-foreground: oklch(0.13 0.028 261.692);
-	--sidebar-primary: oklch(0.21 0.034 264.665);
-	--sidebar-primary-foreground: oklch(0.985 0.002 247.839);
-	--sidebar-accent: oklch(0.967 0.003 264.542);
-	--sidebar-accent-foreground: oklch(0.21 0.034 264.665);
-	--sidebar-border: oklch(0.928 0.006 264.531);
-	--sidebar-ring: oklch(0.707 0.022 261.325);
+  --radius: 0.65rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.488 0.243 264.376);
+  --primary-foreground: oklch(0.97 0.014 254.604);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.809 0.105 251.813);
+  --chart-2: oklch(0.623 0.214 259.815);
+  --chart-3: oklch(0.546 0.245 262.881);
+  --chart-4: oklch(0.488 0.243 264.376);
+  --chart-5: oklch(0.424 0.199 265.638);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-primary: oklch(0.546 0.245 262.881);
+  --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-	--background: oklch(0.13 0.028 261.692);
-	--foreground: oklch(0.985 0.002 247.839);
-	--card: oklch(0.21 0.034 264.665);
-	--card-foreground: oklch(0.985 0.002 247.839);
-	--popover: oklch(0.21 0.034 264.665);
-	--popover-foreground: oklch(0.985 0.002 247.839);
-	--primary: oklch(0.928 0.006 264.531);
-	--primary-foreground: oklch(0.21 0.034 264.665);
-	--secondary: oklch(0.278 0.033 256.848);
-	--secondary-foreground: oklch(0.985 0.002 247.839);
-	--muted: oklch(0.278 0.033 256.848);
-	--muted-foreground: oklch(0.707 0.022 261.325);
-	--accent: oklch(0.278 0.033 256.848);
-	--accent-foreground: oklch(0.985 0.002 247.839);
-	--destructive: oklch(0.704 0.191 22.216);
-	--border: oklch(1 0 0 / 10%);
-	--input: oklch(1 0 0 / 15%);
-	--ring: oklch(0.551 0.027 264.364);
-	--chart-1: oklch(0.488 0.243 264.376);
-	--chart-2: oklch(0.696 0.17 162.48);
-	--chart-3: oklch(0.769 0.188 70.08);
-	--chart-4: oklch(0.627 0.265 303.9);
-	--chart-5: oklch(0.645 0.246 16.439);
-	--sidebar: oklch(0.21 0.034 264.665);
-	--sidebar-foreground: oklch(0.985 0.002 247.839);
-	--sidebar-primary: oklch(0.488 0.243 264.376);
-	--sidebar-primary-foreground: oklch(0.985 0.002 247.839);
-	--sidebar-accent: oklch(0.278 0.033 256.848);
-	--sidebar-accent-foreground: oklch(0.985 0.002 247.839);
-	--sidebar-border: oklch(1 0 0 / 10%);
-	--sidebar-ring: oklch(0.551 0.027 264.364);
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.488 0.243 264.376);
+  --primary-foreground: oklch(0.97 0.014 254.604);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.809 0.105 251.813);
+  --chart-2: oklch(0.623 0.214 259.815);
+  --chart-3: oklch(0.546 0.245 262.881);
+  --chart-4: oklch(0.488 0.243 264.376);
+  --chart-5: oklch(0.424 0.199 265.638);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.623 0.214 259.815);
+  --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-	}
+  }
   body {
     @apply bg-background text-foreground;
-	}
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media print {
+  /* ── Force CSS variables to light mode values ────────── */
+  :root,
+  .dark {
+    --background: #ffffff !important;
+    --foreground: #111111 !important;
+    --card: #ffffff !important;
+    --card-foreground: #111111 !important;
+    --popover: #ffffff !important;
+    --popover-foreground: #111111 !important;
+    --muted: #f3f4f6 !important;
+    --muted-foreground: #4b5563 !important;
+    --accent: #f3f4f6 !important;
+    --accent-foreground: #111111 !important;
+    --secondary: #f3f4f6 !important;
+    --secondary-foreground: #111111 !important;
+    --border: #d1d5db !important;
+    --input: #d1d5db !important;
+  }
+
+  /* ── Layout: hide chrome ─────────────────────────────── */
+  header,
+  aside,
+  nav,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 11pt;
+  }
+
+  main {
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* ── Typography ──────────────────────────────────────── */
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #111111 !important;
+    page-break-after: avoid;
+  }
+
+  p,
+  li,
+  td,
+  th,
+  label,
+  span {
+    color: #222222 !important;
+  }
+
+  /* ── Page breaks ─────────────────────────────────────── */
+  section,
+  .print-section {
+    page-break-inside: avoid;
+  }
+
+  /* ── Visual chrome ───────────────────────────────────── */
+  [class*="shadow"] {
+    box-shadow: none !important;
+  }
+
+  [class*="rounded"] {
+    border-radius: 4px !important;
+  }
+
+  /* Force all borders to a neutral dark colour so they show on paper */
+  [class*="border"] {
+    border-color: #cccccc !important;
+  }
+
+  /* Muted/background areas: light grey instead of oklch tokens */
+  [class*="bg-muted"],
+  [class*="bg-card"],
+  [class*="bg-background"] {
+    background-color: #f5f5f5 !important;
+  }
+
+  /* ── Text inputs & textareas ─────────────────────────── */
+  /* Remove web-form appearance; show the value as plain text */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="date"],
+  textarea {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #555555 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 1pt 0 !important;
+    color: #111111 !important;
+    font-size: 10.5pt !important;
+    font-family: inherit !important;
+    resize: none !important;
+    width: 100% !important;
+    min-height: unset !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Placeholder text — make invisible when printing */
+  input::placeholder,
+  textarea::placeholder {
+    color: transparent !important;
+  }
+
+  /* ── Radio buttons ───────────────────────────────────── */
+  /* Style the label/div containing the radio so only the selected one is prominent */
+  input[type="radio"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    width: 10pt !important;
+    height: 10pt !important;
+    border: 1.5pt solid #555555 !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    flex-shrink: 0 !important;
+    position: relative !important;
+  }
+
+  input[type="radio"]:checked {
+    border-color: #111111 !important;
+    background: #111111 !important;
+  }
+
+  /* Dim unselected radio rows so the chosen option stands out */
+  label:has(input[type="radio"]:not(:checked)) {
+    opacity: 0.4;
+  }
+
+  /* ── Checkboxes (native + shadcn) ────────────────────── */
+  input[type="checkbox"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    width: 10pt !important;
+    height: 10pt !important;
+    border: 1.5pt solid #555555 !important;
+    border-radius: 2pt !important;
+    background: transparent !important;
+    flex-shrink: 0 !important;
+    position: relative !important;
+  }
+
+  input[type="checkbox"]:checked {
+    background: #111111 !important;
+    border-color: #111111 !important;
+  }
+
+  /* shadcn Checkbox renders as a <button role="checkbox"> */
+  button[role="checkbox"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    width: 10pt !important;
+    height: 10pt !important;
+    min-width: 10pt !important;
+    border: 1.5pt solid #555555 !important;
+    border-radius: 2pt !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  button[role="checkbox"][data-state="checked"] {
+    background: #111111 !important;
+    border-color: #111111 !important;
+  }
+
+  /* Hide the svg check icon inside shadcn checkbox — the filled square is enough */
+  button[role="checkbox"] svg {
+    display: none !important;
+  }
+
+  /* ── Struck-through checked items ───────────────────── */
+  .line-through {
+    text-decoration: line-through !important;
+    color: #777777 !important;
+  }
+
+  /* ── Callout blocks ──────────────────────────────────── */
+  [class*="callout"],
+  [data-callout] {
+    border-left: 3pt solid #555555 !important;
+    background: #f9f9f9 !important;
+    padding: 6pt 10pt !important;
+    page-break-inside: avoid;
+  }
+
+  /* ── Separator / divider ─────────────────────────────── */
+  hr,
+  [role="separator"],
+  [data-orientation="horizontal"] {
+    border-top: 0.5pt solid #cccccc !important;
+    margin: 6pt 0 !important;
+  }
 }
