@@ -4,8 +4,6 @@ import { useState } from "react";
 import { PageHeader } from "@/components/docs/page-header";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import { downloadPdf } from "@/lib/download-pdf";
-import { ReportPdf } from "@/lib/report-pdf";
 
 type HealthStatus = "healthy" | "warning" | "blocked";
 
@@ -43,6 +41,10 @@ export default function ReportPage() {
 
   const handleDownload = async () => {
     setDownloading(true);
+    const [{ downloadPdf }, { ReportPdf }] = await Promise.all([
+      import("@/lib/download-pdf"),
+      import("@/lib/report-pdf"),
+    ]);
     await downloadPdf(
       ReportPdf({
         vaName,

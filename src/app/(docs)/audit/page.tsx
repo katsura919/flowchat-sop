@@ -6,8 +6,6 @@ import { Callout } from "@/components/docs/callout";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import { downloadPdf } from "@/lib/download-pdf";
-import { AuditPdf } from "@/lib/audit-pdf";
 
 const stages = [
   "Stage 1 — Build",
@@ -74,6 +72,10 @@ export default function AuditPage() {
 
   const handleDownload = async () => {
     setDownloading(true);
+    const [{ downloadPdf }, { AuditPdf }] = await Promise.all([
+      import("@/lib/download-pdf"),
+      import("@/lib/audit-pdf"),
+    ]);
     await downloadPdf(
       AuditPdf({
         vaName,
